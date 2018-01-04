@@ -1,0 +1,22 @@
+{
+  "name": "pizza-restaurant",
+  "version": "1.0.0",
+  "description": "RDBM Schema with CRUD API",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:reset": "dropdb pizza_restaurant; createdb pizza_restaurant && npm run load_schema",
+    "load_schema": "psql -d pizza_restaurant < src/models/db/schema.sql",
+    "db:seed": "psql -d pizza_restaurant < src/models/db/seed.sql"
+  },
+  "author": "Celeste De Santiago",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg-promise": "^7.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  }
+}
