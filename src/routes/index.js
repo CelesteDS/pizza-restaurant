@@ -1,13 +1,16 @@
 const express = require('express')
 
+const customers = require('./customers')
+const drinks = require('./drinks')
+const pizzas = require('./pizzas')
+
 const routes = express.Router()
 
-routes.get('/getit', (req, res) => {
-  res.send('gotten')
-})
 routes.get('/', (req, res) => {
-  res.send('getting')
+  res.send('Welcome to Pizza Planet')
 })
-
+routes.use(customers)
+routes.use(drinks)
+routes.use(pizzas)
 
 module.exports = routes
