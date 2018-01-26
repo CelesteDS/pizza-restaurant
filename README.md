@@ -1,4 +1,7 @@
-## Endpoints
+## An easy to use pizza restaurant API.  
+Tracks customers & their orders of pizzas and drinks.
+
+### Endpoints
 
 `/` - displays welcome message
 
